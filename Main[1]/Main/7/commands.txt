@@ -1,0 +1,50 @@
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+cd /tmp
+wget https://www.python.org/ftp/python/3.12.6/Python-3.12.6.tgz
+
+
+tar -xf Python-3.12.6.tgz
+cd Python-3.12.6
+./configure --enable-optimizations
+make -j$(nproc)
+
+
+sudo make altinstall
+
+python3.12 --version
+
+
+
+
+python3 --version
+pip3 --version
+
+
+pip3 install Flask
+
+
+pip3 install Flask
+
+
+python3 web_services.py
+
+
+
+javac StudentClient.java
+
+
+java StudentClient
+
+
+
+if needed
+
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+

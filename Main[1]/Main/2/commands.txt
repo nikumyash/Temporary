@@ -1,0 +1,17 @@
+sudo update-alternatives --config java
+
+
+idlj -fall CalculatorApp.idl
+javac CalculatorApp/*.java CalculatorServer.java CalculatorClient.java
+tnameserv -ORBInitialPort 1050
+java CalculatorServer -ORBInitialPort 1050 -ORBInitialHost localhost
+java CalculatorClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+
+
+
+if needed
+
+sudo update-alternatives --config java
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH

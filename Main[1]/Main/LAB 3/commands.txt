@@ -1,0 +1,11 @@
+sudo apt-get update
+sudo apt-get install openmpi-bin openmpi-common libopenmpi-dev
+mpicc -o mpi_sum mpi_sum.c
+mpirun -np 4 ./mpi_sum
+or
+mpirun --oversubscribe --np 4 ./mpi_sum
+
+
+if needed
+
+sudo update-alternatives --config java

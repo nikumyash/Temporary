@@ -1,0 +1,13 @@
+java -version
+javac -version
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+javac -version
+idlj -fall Reverser.idl
+javac StringOperations/*.java ReverserServer.java ReverserClient.java
+orbd -ORBInitialPort 1050
+
+java ReverserServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+java ReverserClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
